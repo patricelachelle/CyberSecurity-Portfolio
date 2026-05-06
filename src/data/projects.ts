@@ -1,5 +1,6 @@
 import {
   AlertTriangle,
+  Bot,
   ClipboardCheck,
   FileWarning,
   GraduationCap,
@@ -23,6 +24,18 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    title: "AI Safety and Prompt Injection Evaluation",
+    category: "AI Security",
+    status: "Placeholder",
+    tools: ["RLHF", "Prompt Injection Testing", "NIST AI RMF", "MITRE ATLAS", "OWASP LLM Top 10"],
+    shortDescription:
+      "A planned case study for documenting AI safety testing, prompt injection risks, and sensitive data disclosure concerns.",
+    detailedDescription:
+      "Use this placeholder for a portfolio-safe AI security project that explains the test objective, risk category, evaluation method, mitigation recommendation, and how guardrails reduce unsafe or noncompliant model behavior.",
+    keySkills: ["AI security", "Adversarial testing", "Risk documentation", "Responsible AI governance"],
+    icon: Bot,
+  },
   {
     title: "SIEM Log Analysis Lab",
     category: "Detection & Analysis",

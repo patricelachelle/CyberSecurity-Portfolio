@@ -100,7 +100,7 @@ button {
 }
 
 .desktop-nav {
-  gap: 1.5rem;
+  gap: 1.05rem;
 }
 
 .desktop-nav a {
@@ -391,7 +391,7 @@ h3 {
 }
 
 .skills-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 }
 
 .skill-card {
@@ -575,6 +575,20 @@ h3 {
   align-items: start;
 }
 
+.credential-groups {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.credential-groups h3 {
+  margin-bottom: 0.65rem;
+}
+
+.license-note {
+  color: var(--muted);
+  line-height: 1.65;
+}
+
 .check-list li {
   display: flex;
   gap: 0.7rem;
@@ -588,6 +602,14 @@ h3 {
   flex: 0 0 auto;
   margin-top: 0.15rem;
   color: var(--teal);
+}
+
+.check-list small {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
 }
 
 .timeline {

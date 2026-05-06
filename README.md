@@ -7,9 +7,11 @@ This repository contains a professional cybersecurity portfolio for Patrice Brow
 The portfolio highlights work related to:
 
 - Cybersecurity training and awareness
+- AI security, AI safety evaluation, and responsible AI governance
 - Security analysis and threat identification
 - Risk identification and mitigation
 - Compliance and control review
+- Regulated-industry risk perspective from Mississippi insurance licenses
 - Incident response documentation
 - SIEM/log analysis and network security fundamentals
 - TryHackMe progress and hands-on lab practice
@@ -24,7 +26,7 @@ Placeholder projects are intentionally labeled so they can be replaced with comp
 - Vite
 - Tailwind CSS v4
 - Lucide React icons
-- GitHub Pages deployment workflow
+- Firebase Hosting
 
 ## Run Locally
 
@@ -68,6 +70,10 @@ src/
 
 The TryHackMe progress section currently lives in `src/App.tsx` as a small editable array named `tryHackMeProgress`. Update the room count, focus areas, profile link, or evidence notes there as your progress changes.
 
+The public resume file lives in `public/Patrice-Brown-Cybersecurity-Resume.pdf` and is linked from the site navigation and hero section. Replace that file with an updated PDF whenever the resume changes.
+
+The favicon lives in `public/favicon.svg`. The custom domain planned for deployment is `patricebrownportfolio.com`.
+
 ## Add a New Project
 
 Portfolio projects are managed in `src/data/projects.ts`.
@@ -94,15 +100,33 @@ If you add a new icon, import it from `lucide-react` at the top of `src/data/pro
 
 ## Deployment Notes
 
-The repository includes `.github/workflows/static.yml`, which builds the Vite app and deploys the `dist` folder to GitHub Pages.
+This portfolio is configured for Firebase Hosting.
 
-For GitHub Pages project sites, the workflow sets:
+Build the app:
 
 ```bash
-BASE_PATH=/${{ github.event.repository.name }}/
+npm run build
 ```
 
-For a custom domain or another host, update the deployment configuration and the `BASE_PATH` value if needed.
+Deploy the `dist` folder:
+
+```bash
+firebase deploy --only hosting
+```
+
+Firebase project:
+
+```text
+patrice-brown-portfolio
+```
+
+Default live URL:
+
+```text
+https://patrice-brown-portfolio.web.app
+```
+
+For `patricebrownportfolio.com`, connect the domain in Firebase Hosting, then add the DNS records that Firebase provides at your domain registrar.
 
 ## Privacy
 

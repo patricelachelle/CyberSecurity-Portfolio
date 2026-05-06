@@ -11,7 +11,9 @@ import {
   Mail,
   Menu,
   Network,
+  Shield,
   ShieldCheck,
+  Sparkles,
   Target,
   Trophy,
   UsersRound,
@@ -27,6 +29,7 @@ const navItems = [
   { label: "TryHackMe", href: "#tryhackme" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
+  { label: "Resume", href: "Patrice-Brown-Cybersecurity-Resume.pdf" },
 ];
 
 const coreSkills = [
@@ -36,9 +39,14 @@ const coreSkills = [
     items: ["Threat identification", "Log analysis", "Alert triage", "Risk documentation"],
   },
   {
+    title: "AI Security",
+    icon: Sparkles,
+    items: ["Prompt injection testing", "Sensitive data disclosure", "RLHF evaluation", "AI guardrails"],
+  },
+  {
     title: "Risk & Compliance",
     icon: ClipboardList,
-    items: ["NIST CSF", "PCI DSS", "GDPR", "SOC 1/SOC 2 awareness"],
+    items: ["NIST CSF", "NIST AI RMF", "MITRE ATLAS", "OWASP Top 10 for LLMs"],
   },
   {
     title: "Network Security",
@@ -53,10 +61,23 @@ const coreSkills = [
 ];
 
 const training = [
-  "Google Cybersecurity Professional Certificate coursework",
-  "Merit America cybersecurity training",
+  "Master of Science in Cybersecurity, Southern New Hampshire University, in progress",
+  "Google Cybersecurity Professional Certificate through Merit America",
+  "Google AI Professional Certificate",
+  "AWS AI Practitioner",
+  "Bachelor of Science in Psychology, University of Memphis",
   "Hands-on labs covering Linux, Windows, SIEM review, and network analysis",
-  "Continued portfolio projects in incident response, compliance, and vulnerability assessment",
+];
+
+const plannedCertifications = [
+  "CompTIA A+",
+  "CompTIA Security+",
+  "CompTIA Security AI+ / AI security certification path",
+];
+
+const professionalLicenses = [
+  "Mississippi Life, Health, and Accident Producer License",
+  "Mississippi Property and Casualty Producer License",
 ];
 
 const tryHackMeProgress = [
@@ -67,21 +88,21 @@ const tryHackMeProgress = [
   },
   {
     label: "Current focus",
-    value: "SOC foundations",
-    detail: "Linux, Windows, networking, SIEM review, and incident handling.",
+    value: "SOC + forensics",
+    detail: "Linux, Windows, networking, Splunk, Wireshark, and log analysis.",
   },
   {
     label: "Evidence",
     value: "Journal",
-    detail: "Use this area to link writeups, screenshots, badges, or a public profile.",
+    detail: "Room notes can become short writeups, screenshots, or profile evidence.",
   },
 ];
 
 const highlights = [
+  "AI content evaluation experience focused on prompt injection patterns, sensitive data disclosure risks, and safer model behavior.",
   "Experience working in data-sensitive and compliance-driven environments across education, healthcare, insurance, and social services.",
-  "Strong background communicating processes clearly to technical and non-technical audiences.",
-  "Leadership experience supporting training, documentation, service quality, and operational improvement.",
-  "Current cybersecurity focus includes security awareness, risk identification, incident documentation, and log analysis.",
+  "Leadership experience supporting remote teams, quality review, documentation, and operational improvement.",
+  "Current cybersecurity focus includes security awareness, risk identification, incident documentation, AI security, and log analysis.",
 ];
 
 export default function App() {
@@ -132,17 +153,20 @@ export default function App() {
       <main id="top">
         <section className="hero section">
           <div className="hero-content">
-            <p className="eyebrow">Cybersecurity training, analysis, and awareness</p>
-            <h1>Security-focused portfolio for risk, response, and clear communication.</h1>
+            <p className="eyebrow">Cybersecurity, AI security, risk, and analysis</p>
+            <h1>Security-focused portfolio for risk, response, and responsible AI.</h1>
             <p className="hero-copy">
               I am building a cybersecurity portfolio centered on practical analysis,
-              compliance-minded thinking, incident documentation, and security awareness
-              training. My background in data-sensitive service environments helps me
-              connect technical findings to people, process, and business impact.
+              AI safety evaluation, compliance-minded thinking, incident documentation,
+              and security awareness. My background in data-sensitive service environments
+              helps me connect technical findings to people, process, and business impact.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#projects">
                 View projects <ArrowRight size={18} />
+              </a>
+              <a className="button button-secondary" href="Patrice-Brown-Cybersecurity-Resume.pdf" target="_blank" rel="noreferrer">
+                Resume <FileText size={18} />
               </a>
               <a className="button button-secondary" href="#contact">
                 Contact me <Mail size={18} />
@@ -157,9 +181,9 @@ export default function App() {
             </div>
             <ul>
               <li>SIEM and security log review</li>
+              <li>AI safety and prompt injection evaluation</li>
               <li>Incident response documentation</li>
               <li>Risk identification and mitigation planning</li>
-              <li>Security awareness and user training</li>
             </ul>
           </aside>
         </section>
@@ -167,19 +191,19 @@ export default function App() {
         <section id="about" className="section about-section">
           <div className="about-photo-card">
             <img
-              src="/patrice-brown-headshot.png"
+              src="patrice-brown-headshot.png"
               alt="Professional headshot of Patrice Brown"
             />
           </div>
           <div className="section-copy">
             <p className="eyebrow">About Me</p>
-            <h2>Career-changer with a people-first security mindset.</h2>
+            <h2>Cybersecurity learner with a people-first, risk-aware mindset.</h2>
             <p>
               My cybersecurity work is grounded in practical problem-solving,
               careful documentation, and communication with users who need security
               to feel understandable. I am developing hands-on skills in security
-              analysis, network review, incident response, and compliance while
-              bringing prior experience from environments where privacy, accuracy,
+              analysis, network review, incident response, AI security, and compliance
+              while bringing prior experience from environments where privacy, accuracy,
               and trust mattered every day.
             </p>
             <p>
@@ -194,7 +218,7 @@ export default function App() {
         <section className="section resume-summary">
           <div className="section-heading">
             <p className="eyebrow">Resume Summary</p>
-            <h2>Strengths I bring into cybersecurity work.</h2>
+            <h2>Strengths I bring into cybersecurity and AI security work.</h2>
           </div>
           <div className="summary-grid">
             <div>
@@ -210,7 +234,7 @@ export default function App() {
             <div>
               <BookOpenCheck size={24} />
               <h3>Security Learning</h3>
-              <p>Current training in security frameworks, tools, analysis methods, and hands-on labs.</p>
+              <p>Current training in cybersecurity, AI security frameworks, analysis methods, and hands-on labs.</p>
             </div>
           </div>
         </section>
@@ -255,16 +279,50 @@ export default function App() {
         <section id="certifications" className="section split-band">
           <div>
             <p className="eyebrow">Certifications / Training</p>
-            <h2>Current cybersecurity learning path.</h2>
+            <h2>Current learning path, planned exams, and domain licenses.</h2>
           </div>
-          <ul className="check-list">
-            {training.map((item) => (
-              <li key={item}>
-                <Award size={18} />
-                {item}
-              </li>
-            ))}
-          </ul>
+          <div className="credential-groups">
+            <div>
+              <h3>Education and Training</h3>
+              <ul className="check-list">
+                {training.map((item) => (
+                  <li key={item}>
+                    <Award size={18} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3>Planned Certification Exams</h3>
+              <ul className="check-list">
+                {plannedCertifications.map((item) => (
+                  <li key={item}>
+                    <Target size={18} />
+                    <span>
+                      {item}
+                      <small>In preparation</small>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3>Professional Licenses</h3>
+              <p className="license-note">
+                These licenses support a risk, compliance, and regulated-industry perspective,
+                especially for cybersecurity work in insurance and healthcare environments.
+              </p>
+              <ul className="check-list">
+                {professionalLicenses.map((item) => (
+                  <li key={item}>
+                    <Shield size={18} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </section>
 
         <section id="tryhackme" className="section tryhackme-section">
@@ -292,8 +350,8 @@ export default function App() {
             <Target size={20} aria-hidden="true" />
             <p>
               Current lab themes include Linux and Windows fundamentals, network
-              troubleshooting with Wireshark, security monitoring concepts, Splunk
-              practice, and incident response documentation.
+              troubleshooting with Wireshark, Intro to Logs and Log Analysis,
+              Windows Forensics, Splunk Basics, and incident handling with Splunk.
             </p>
           </div>
         </section>
@@ -327,10 +385,10 @@ export default function App() {
             <a className="button button-primary" href="mailto:patrice.lachelle.brown@gmail.com">
               <Mail size={18} /> Email
             </a>
-            <a className="button button-secondary" href="https://github.com/" target="_blank" rel="noreferrer">
+            <a className="button button-secondary" href="https://github.com/patricelachelle" target="_blank" rel="noreferrer">
               <Github size={18} /> GitHub
             </a>
-            <a className="button button-secondary" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+            <a className="button button-secondary" href="http://www.linkedin.com/in/patrice-brown-lia" target="_blank" rel="noreferrer">
               <Linkedin size={18} /> LinkedIn
             </a>
           </div>
