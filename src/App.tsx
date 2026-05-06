@@ -154,12 +154,13 @@ export default function App() {
         <section className="hero section">
           <div className="hero-content">
             <p className="eyebrow">Cybersecurity, AI security, risk, and analysis</p>
-            <h1>Security-focused portfolio for risk, response, and responsible AI.</h1>
+            <h1>Protecting people, process, and data with clear security thinking.</h1>
             <p className="hero-copy">
               I am building a cybersecurity portfolio centered on practical analysis,
               AI safety evaluation, compliance-minded thinking, incident documentation,
               and security awareness. My background in data-sensitive service environments
-              helps me connect technical findings to people, process, and business impact.
+              helps me translate technical findings into calm, useful next steps for people
+              and organizations.
             </p>
             <div className="hero-actions">
               <a className="button button-primary" href="#projects">
@@ -207,10 +208,10 @@ export default function App() {
               and trust mattered every day.
             </p>
             <p>
-              This portfolio is designed to grow with new labs, reports, and case
-              studies as I complete them. Each project will show the tools used,
-              the risk or scenario being addressed, the steps taken, and the skills
-              demonstrated.
+              I like security work that makes people feel more capable, not more confused.
+              This portfolio is designed to grow with new labs, reports, and case studies
+              as I complete them, with each project showing the scenario, tools, decisions,
+              and skills demonstrated.
             </p>
           </div>
         </section>

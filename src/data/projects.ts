@@ -1,8 +1,10 @@
 import {
   AlertTriangle,
+  BookOpenCheck,
   Bot,
   ClipboardCheck,
   FileWarning,
+  Gamepad2,
   GraduationCap,
   Network,
   SearchCode,
@@ -19,11 +21,76 @@ export type Project = {
   keySkills: string[];
   githubLink?: string;
   liveDemoLink?: string;
-  screenshots?: string[];
+  screenshots?: {
+    src: string;
+    alt: string;
+  }[];
   icon: LucideIcon;
 };
 
 export const projects: Project[] = [
+  {
+    title: "Cyber Study Arena",
+    category: "Security Training & Awareness",
+    status: "Completed",
+    tools: ["React", "Node.js", "Express", "Socket.IO", "Firebase Hosting", "Cloud Run", "Vertex AI"],
+    shortDescription:
+      "A cybersecurity study game with solo practice, live multiplayer rooms, flashcards, scenarios, and AI-supported interview practice.",
+    detailedDescription:
+      "Built as a shareable training tool for Google Cybersecurity Certificate study sessions and mentoring. The app supports category-focused review, immediate answer explanations, missed-question review, team play, secure host controls, server-side scoring, and backend cost guardrails for AI-generated practice.",
+    keySkills: [
+      "Security awareness training",
+      "Full-stack deployment",
+      "Realtime multiplayer architecture",
+      "Backend security controls",
+    ],
+    githubLink: "https://github.com/patricelachelle/Study-Game",
+    liveDemoLink: "https://cyberstudyarena.com",
+    screenshots: [
+      {
+        src: "projects/cyber-study-arena/setup-dashboard.png",
+        alt: "Cyber Study Arena study setup screen with category selection and multiplayer room controls",
+      },
+      {
+        src: "projects/cyber-study-arena/active-quiz.png",
+        alt: "Cyber Study Arena active SQL quiz question with progress panel",
+      },
+    ],
+    icon: Gamepad2,
+  },
+  {
+    title: "Speak the Word",
+    category: "Full-Stack Study App",
+    status: "Completed",
+    tools: ["React", "Vite", "Firebase Auth", "Firestore", "Firebase Functions", "API.Bible", "Gemini/Vertex AI"],
+    shortDescription:
+      "A Bible reading, pronunciation, journaling, and reflection app with AI-supported study guidance and privacy-minded social features.",
+    detailedDescription:
+      "Built to help users search Scripture, hear difficult words pronounced, save favorite verses, journal prayers, ask faith-based study questions, and receive AI-supported reflection while keeping provider secrets backend-only and using username-first social features instead of exposing email addresses.",
+    keySkills: [
+      "Privacy-first user experience",
+      "Backend API integration",
+      "Authentication and profile design",
+      "AI-assisted study workflow",
+    ],
+    githubLink: "https://github.com/patricelachelle/Pronounce-Bible-Words-main",
+    liveDemoLink: "https://speak-the-word-92b87.web.app",
+    screenshots: [
+      {
+        src: "projects/speak-the-word/create-account.png",
+        alt: "Speak the Word account creation screen with username-first signup",
+      },
+      {
+        src: "projects/speak-the-word/bible-reader.png",
+        alt: "Speak the Word Bible reader screen with passage selection and scripture text",
+      },
+      {
+        src: "projects/speak-the-word/ai-study.png",
+        alt: "Speak the Word AI study screen showing verse analysis, historical context, life application, and prayer reflection",
+      },
+    ],
+    icon: BookOpenCheck,
+  },
   {
     title: "AI Safety and Prompt Injection Evaluation",
     category: "AI Security",

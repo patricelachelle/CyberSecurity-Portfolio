@@ -19,6 +19,11 @@ The portfolio highlights work related to:
 
 Placeholder projects are intentionally labeled so they can be replaced with completed labs, reports, screenshots, GitHub links, and demos over time.
 
+Current featured completed projects include:
+
+- Cyber Study Arena: `https://cyberstudyarena.com`
+- Speak the Word: `https://speak-the-word-92b87.web.app`
+
 ## Tech Stack
 
 - React
