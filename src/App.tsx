@@ -191,7 +191,7 @@ export default function App() {
         <section id="about" className="section about-section">
           <div className="about-photo-card">
             <img
-              src="patrice-brown-headshot.png"
+              src="patrice-brown-headshot.jpg"
               alt="Professional headshot of Patrice Brown"
             />
           </div>
