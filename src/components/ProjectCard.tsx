@@ -1,4 +1,4 @@
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 import type { Project } from "../data/projects";
 
 type ProjectCardProps = {
@@ -64,13 +64,6 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <span>GitHub link pending</span>
         )}
 
-        {project.liveDemoLink ? (
-          <a href={project.liveDemoLink} target="_blank" rel="noreferrer">
-            <ExternalLink size={16} /> Live demo
-          </a>
-        ) : (
-          <span>Demo pending</span>
-        )}
       </div>
     </article>
   );

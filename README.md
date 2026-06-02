@@ -95,8 +95,12 @@ Add a new object to the `projects` array:
   detailedDescription: "A more detailed explanation of the scenario, work completed, and outcome.",
   keySkills: ["Log analysis", "Threat identification", "Documentation"],
   githubLink: "https://github.com/your-username/project-repo",
-  liveDemoLink: "https://your-demo-link.example",
-  screenshots: ["/screenshots/project-image.png"],
+  screenshots: [
+    {
+      src: "projects/project-folder/project-image.png",
+      alt: "Short description of what the screenshot shows",
+    },
+  ],
   icon: SearchCode,
 }
 ```

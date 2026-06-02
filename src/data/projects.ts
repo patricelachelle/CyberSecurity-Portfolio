@@ -20,7 +20,6 @@ export type Project = {
   detailedDescription: string;
   keySkills: string[];
   githubLink?: string;
-  liveDemoLink?: string;
   screenshots?: {
     src: string;
     alt: string;
@@ -45,7 +44,6 @@ export const projects: Project[] = [
       "Backend security controls",
     ],
     githubLink: "https://github.com/patricelachelle/Study-Game",
-    liveDemoLink: "https://cyberstudyarena.com",
     screenshots: [
       {
         src: "projects/cyber-study-arena/setup-dashboard.png",
@@ -74,7 +72,6 @@ export const projects: Project[] = [
       "AI-assisted study workflow",
     ],
     githubLink: "https://github.com/patricelachelle/Pronounce-Bible-Words-main",
-    liveDemoLink: "https://speak-the-word-92b87.web.app",
     screenshots: [
       {
         src: "projects/speak-the-word/create-account.png",
@@ -94,25 +91,65 @@ export const projects: Project[] = [
   {
     title: "AI Safety and Prompt Injection Evaluation",
     category: "AI Security",
-    status: "Placeholder",
-    tools: ["RLHF", "Prompt Injection Testing", "NIST AI RMF", "MITRE ATLAS", "OWASP LLM Top 10"],
+    status: "Completed",
+    tools: ["Python", "Ollama", "Llama 3.2", "Prompt Injection Testing", "OWASP LLM Top 10", "MITRE ATLAS", "NIST AI RMF"],
     shortDescription:
-      "A planned case study for documenting AI safety testing, prompt injection risks, and sensitive data disclosure concerns.",
+      "A local AI security evaluation sandbox for testing prompt injection, data disclosure risk, and defensive guardrail behavior.",
     detailedDescription:
-      "Use this placeholder for a portfolio-safe AI security project that explains the test objective, risk category, evaluation method, mitigation recommendation, and how guardrails reduce unsafe or noncompliant model behavior.",
-    keySkills: ["AI security", "Adversarial testing", "Risk documentation", "Responsible AI governance"],
+      "Created a controlled LLM evaluation harness using a local Llama 3.2 model through Ollama. The project compares an unprotected baseline against a hardened gateway design, maps attack vectors to OWASP LLM Top 10 and MITRE ATLAS, and documents inbound prompt filtering plus outbound data loss prevention controls.",
+    keySkills: [
+      "AI security testing",
+      "Prompt injection analysis",
+      "Guardrail evaluation",
+      "Risk documentation",
+    ],
+    githubLink: "https://github.com/patricelachelle/AI-Safety-Evaluation",
+    screenshots: [
+      {
+        src: "projects/ai-safety-evaluation/baseline-test.png",
+        alt: "AI Safety Evaluation terminal output showing unprotected prompt injection baseline testing",
+      },
+      {
+        src: "projects/ai-safety-evaluation/guardrail-result.png",
+        alt: "AI Safety Evaluation terminal output showing protected gateway guardrail results",
+      },
+      {
+        src: "projects/ai-safety-evaluation/evaluation-output.png",
+        alt: "AI Safety Evaluation output documenting prompt injection evaluation results",
+      },
+    ],
     icon: Bot,
   },
   {
     title: "SIEM Log Analysis Lab",
     category: "Detection & Analysis",
-    status: "Placeholder",
-    tools: ["Splunk", "Windows Event Logs", "Linux Logs", "MITRE ATT&CK"],
+    status: "Completed",
+    tools: ["Splunk Cloud", "SPL", "Windows Event Logs", "JSON Logs", "MITRE ATT&CK", "Incident Response"],
     shortDescription:
-      "A planned lab for reviewing event data, identifying suspicious activity, and documenting analysis steps.",
+      "A Splunk Cloud investigation lab for triaging credential spraying, account compromise, and PowerShell-based C2 activity.",
     detailedDescription:
-      "Replace this placeholder with a hands-on SIEM project that shows how you ingest logs, build searches, identify indicators, and summarize findings for technical and non-technical readers.",
-    keySkills: ["Log analysis", "Threat identification", "Alert triage", "Incident documentation"],
+      "Performed an end-to-end SOC-style investigation by ingesting Windows security telemetry, validating event data, writing SPL queries, identifying a credential spraying pattern, confirming the compromised service account, and documenting PowerShell post-exploitation activity with defensive remediation recommendations.",
+    keySkills: [
+      "SIEM data ingestion",
+      "SPL query development",
+      "Threat hunting",
+      "Incident timeline documentation",
+    ],
+    githubLink: "https://github.com/patricelachelle/SIEM-Log-Analysis-Lab",
+    screenshots: [
+      {
+        src: "projects/siem-log-analysis-lab/raw-telemetry.png",
+        alt: "Splunk Cloud view showing raw incident telemetry ingestion for the SIEM lab",
+      },
+      {
+        src: "projects/siem-log-analysis-lab/failed-logon-statistics.png",
+        alt: "Splunk table showing failed logon statistics used to identify credential spraying",
+      },
+      {
+        src: "projects/siem-log-analysis-lab/powershell-execution-audit.png",
+        alt: "Splunk search output showing PowerShell execution audit results for post-exploitation analysis",
+      },
+    ],
     icon: SearchCode,
   },
   {
