@@ -1,11 +1,7 @@
 import {
-  AlertTriangle,
   BookOpenCheck,
   Bot,
-  ClipboardCheck,
-  FileWarning,
   Gamepad2,
-  GraduationCap,
   Network,
   SearchCode,
 } from "lucide-react";
@@ -153,63 +149,35 @@ export const projects: Project[] = [
     icon: SearchCode,
   },
   {
-    title: "Network Traffic Analysis with Wireshark",
-    category: "Network Security",
-    status: "Placeholder",
-    tools: ["Wireshark", "Tcpdump", "Packet Capture", "TCP/IP"],
+    title: "Automated OSINT Threat Enrichment Pipeline",
+    category: "Threat Intelligence & Automation",
+    status: "Completed",
+    tools: ["Python", "Regex", "AbuseIPDB API", "Pandas", "CSV Reporting", "OSINT"],
     shortDescription:
-      "A planned packet-analysis project focused on reading traffic patterns and documenting network observations.",
+      "A Python-based pipeline that parses messy network logs, validates IP data, and enriches indicators with live threat intelligence.",
     detailedDescription:
-      "Use this placeholder for a lab that explains the traffic captured, what normal and unusual behavior looked like, and how the findings connect to network security fundamentals.",
-    keySkills: ["Packet analysis", "Network troubleshooting", "Protocol review", "Technical reporting"],
+      "Built an automated workflow for SOC-style threat enrichment by sanitizing unstructured log input, extracting unique IPv4 addresses, querying the AbuseIPDB API for reputation data, and exporting a structured CSV report that supports faster triage and more consistent analyst review.",
+    keySkills: [
+      "Threat intelligence enrichment",
+      "Security automation",
+      "Log parsing and validation",
+      "Structured reporting",
+    ],
+    githubLink: "https://github.com/patricelachelle/automated-threat-parser",
+    screenshots: [
+      {
+        src: "projects/automated-threat-parser/messy-data.png",
+        alt: "Automated threat parser screenshot showing messy unstructured log data before cleanup",
+      },
+      {
+        src: "projects/automated-threat-parser/terminal-execution.png",
+        alt: "Automated threat parser terminal execution showing parsed IPs and threat enrichment alerts",
+      },
+      {
+        src: "projects/automated-threat-parser/csv-report.png",
+        alt: "Automated threat parser CSV report showing structured threat intelligence output",
+      },
+    ],
     icon: Network,
-  },
-  {
-    title: "Vulnerability Assessment Report",
-    category: "Risk & Mitigation",
-    status: "Placeholder",
-    tools: ["Nmap", "Vulnerability Scanning", "Risk Matrix", "Remediation Planning"],
-    shortDescription:
-      "A planned report that identifies security weaknesses, assigns risk levels, and recommends practical mitigations.",
-    detailedDescription:
-      "Replace this with a structured vulnerability assessment that includes scope, findings, severity, business impact, remediation steps, and evidence screenshots where appropriate.",
-    keySkills: ["Risk identification", "Vulnerability assessment", "Mitigation planning", "Executive communication"],
-    icon: FileWarning,
-  },
-  {
-    title: "Incident Response Case Study",
-    category: "Incident Response",
-    status: "Placeholder",
-    tools: ["NIST CSF", "Incident Handler Journal", "Timeline Documentation"],
-    shortDescription:
-      "A planned case study for documenting an incident from detection through recovery recommendations.",
-    detailedDescription:
-      "Use this project to show how you organize incident notes, determine scope, communicate impact, and document containment, eradication, recovery, and lessons learned.",
-    keySkills: ["Incident response", "Root-cause analysis", "Recovery planning", "Process improvement"],
-    icon: AlertTriangle,
-  },
-  {
-    title: "Security Awareness Training Program",
-    category: "Training & Awareness",
-    status: "Placeholder",
-    tools: ["Presentation Design", "Policy Communication", "Phishing Awareness"],
-    shortDescription:
-      "A planned training artifact for translating security practices into clear guidance for everyday users.",
-    detailedDescription:
-      "Replace this with a training plan, slide deck, or awareness campaign that demonstrates your ability to teach secure behavior and communicate with non-technical audiences.",
-    keySkills: ["Security awareness", "Training delivery", "Plain-language communication", "Leadership"],
-    icon: GraduationCap,
-  },
-  {
-    title: "Compliance and Risk Assessment Project",
-    category: "Compliance",
-    status: "Placeholder",
-    tools: ["NIST CSF", "PCI DSS", "GDPR", "SOC 1/SOC 2"],
-    shortDescription:
-      "A planned compliance-focused project for mapping controls, identifying gaps, and recommending improvements.",
-    detailedDescription:
-      "Use this placeholder for a controls review or audit-style project that explains the framework used, the risks discovered, and the practical steps recommended to reduce exposure.",
-    keySkills: ["Compliance review", "Control mapping", "Gap analysis", "Stakeholder reporting"],
-    icon: ClipboardCheck,
   },
 ];
