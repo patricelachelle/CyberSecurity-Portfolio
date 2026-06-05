@@ -117,6 +117,38 @@ export const projects: Project[] = [
     icon: Bot,
   },
   {
+    title: "Windows Detection Engineering Pack",
+    category: "Detection Engineering",
+    status: "Completed",
+    tools: ["Splunk", "SPL", "Windows Event Logs", "Web Logs", "DNS Logs", "MITRE ATT&CK", "Threat Intelligence"],
+    shortDescription:
+      "A multi-scenario detection engineering project for validating brute force, PowerShell abuse, web exploitation, registry persistence, and DNS tunneling detections in Splunk.",
+    detailedDescription:
+      "Built a six-part detection pack around realistic Windows, web, and network attack simulations in a Splunk lab. The project includes ATT&CK-aligned detections, analyst-focused SPL queries, validation evidence, triage guidance, and follow-up threat-intelligence enrichment to show how detection logic supports real SOC workflows.",
+    keySkills: [
+      "Detection engineering",
+      "SPL query development",
+      "Threat hunting and triage",
+      "ATT&CK-aligned alert validation",
+    ],
+    githubLink: "https://github.com/patricelachelle/windows-detection-engineering-pack",
+    screenshots: [
+      {
+        src: "projects/windows-detection-engineering-pack/brute-force-detection-results.png",
+        alt: "Splunk detection results for brute-force authentication activity in the Windows Detection Engineering Pack",
+      },
+      {
+        src: "projects/windows-detection-engineering-pack/powershell-detection-results.png",
+        alt: "Splunk detection results for suspicious PowerShell execution in the Windows Detection Engineering Pack",
+      },
+      {
+        src: "projects/windows-detection-engineering-pack/api-active-lookup.png",
+        alt: "Threat intelligence enrichment screenshot from the Windows Detection Engineering Pack automation workflow",
+      },
+    ],
+    icon: SearchCode,
+  },
+  {
     title: "SIEM Log Analysis Lab",
     category: "Detection & Analysis",
     status: "Completed",
