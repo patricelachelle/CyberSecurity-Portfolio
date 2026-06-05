@@ -80,11 +80,13 @@ const professionalLicenses = [
   "Mississippi Property and Casualty Producer License",
 ];
 
+const tryHackMeProfileUrl = "https://tryhackme.com/p/CyberChelle333";
+
 const tryHackMeProgress = [
   {
-    label: "Rooms completed",
-    value: "17+",
-    detail: "Update this number as your TryHackMe profile grows.",
+    label: "Public profile",
+    value: "CyberChelle333",
+    detail: "Live TryHackMe profile showing badges, room history, and ongoing platform activity.",
   },
   {
     label: "Current focus",
@@ -93,8 +95,8 @@ const tryHackMeProgress = [
   },
   {
     label: "Evidence",
-    value: "Journal",
-    detail: "Room notes can become short writeups, screenshots, or profile evidence.",
+    value: "Profile-based",
+    detail: "Use the public profile as your main proof of progress, then highlight standout rooms only when needed.",
   },
 ];
 
@@ -333,8 +335,8 @@ export default function App() {
               <h2>Hands-on labs that support practical security skills.</h2>
             </div>
             <p className="muted">
-              This section can be updated with your public profile, room count,
-              badges, screenshots, and short reflections as you keep progressing.
+              This section now points to your public TryHackMe profile so visitors can
+              see your current progress without relying on room-by-room screenshots.
             </p>
           </div>
           <div className="tryhackme-grid">
@@ -349,11 +351,18 @@ export default function App() {
           </div>
           <div className="tryhackme-note">
             <Target size={20} aria-hidden="true" />
-            <p>
-              Current lab themes include Linux and Windows fundamentals, network
-              troubleshooting with Wireshark, Intro to Logs and Log Analysis,
-              Windows Forensics, Splunk Basics, and incident handling with Splunk.
-            </p>
+            <div>
+              <p>
+                Current lab themes include Linux and Windows fundamentals, network
+                troubleshooting with Wireshark, Intro to Logs and Log Analysis,
+                Windows Forensics, Splunk Basics, and incident handling with Splunk.
+              </p>
+              <div className="tryhackme-actions">
+                <a className="button button-secondary" href={tryHackMeProfileUrl} target="_blank" rel="noreferrer">
+                  View TryHackMe Profile <ArrowRight size={18} />
+                </a>
+              </div>
+            </div>
           </div>
         </section>
 
