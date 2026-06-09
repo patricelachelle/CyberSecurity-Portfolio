@@ -75,7 +75,7 @@ src/
 
 The TryHackMe progress section currently lives in `src/App.tsx` as a small editable array named `tryHackMeProgress`. Update the room count, focus areas, profile link, or evidence notes there as your progress changes.
 
-The public resume file lives in `public/Patrice-Brown-Cybersecurity-Resume.pdf` and is linked from the site navigation and hero section. Replace that file with an updated PDF whenever the resume changes.
+The public resume file lives in `public/Patrice_Brown_Resume_Cybersecurity.pdf` and is linked from the site navigation and hero section. Replace that file with an updated PDF whenever the resume changes.
 
 The favicon lives in `public/favicon.svg`. The custom domain planned for deployment is `patricebrownportfolio.com`.
 

@@ -5,14 +5,9 @@ type ProjectCardProps = {
   project: Project;
 };
 
-const statusStyles: Record<Project["status"], string> = {
-  Placeholder: "border-amber-300/50 bg-amber-100 text-amber-900",
-  "In Progress": "border-sky-300/50 bg-sky-100 text-sky-900",
-  Completed: "border-emerald-300/50 bg-emerald-100 text-emerald-900",
-};
-
 export function ProjectCard({ project }: ProjectCardProps) {
   const Icon = project.icon;
+  const featuredSkills = project.keySkills.slice(0, 3);
 
   return (
     <article className="project-card">
@@ -20,15 +15,11 @@ export function ProjectCard({ project }: ProjectCardProps) {
         <div className="project-card__icon" aria-hidden="true">
           <Icon size={22} strokeWidth={1.8} />
         </div>
-        <span className={`status-pill ${statusStyles[project.status]}`}>
-          {project.status}
-        </span>
       </div>
 
       <p className="eyebrow">{project.category}</p>
       <h3>{project.title}</h3>
       <p className="project-card__summary">{project.shortDescription}</p>
-      <p className="project-card__detail">{project.detailedDescription}</p>
 
       {project.screenshots?.length ? (
         <div className="project-card__screenshots" aria-label={`${project.title} screenshots`}>
@@ -47,9 +38,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </div>
 
       <div className="project-card__skills">
-        <strong>Skills demonstrated</strong>
         <ul>
-          {project.keySkills.map((skill) => (
+          {featuredSkills.map((skill) => (
             <li key={skill}>{skill}</li>
           ))}
         </ul>

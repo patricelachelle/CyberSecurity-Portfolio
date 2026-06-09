@@ -29,7 +29,7 @@ const navItems = [
   { label: "TryHackMe", href: "#tryhackme" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
-  { label: "Resume", href: "Patrice-Brown-Cybersecurity-Resume.pdf" },
+  { label: "Resume", href: "Patrice_Brown_Resume_Cybersecurity.pdf" },
 ];
 
 const coreSkills = [
@@ -41,7 +41,7 @@ const coreSkills = [
   {
     title: "AI Security",
     icon: Sparkles,
-    items: ["Prompt injection testing", "Sensitive data disclosure", "RLHF evaluation", "AI guardrails"],
+    items: ["LLM model training", "Prompt injection testing", "Sensitive data disclosure controls", "AI guardrails"],
   },
   {
     title: "Risk & Compliance",
@@ -94,14 +94,14 @@ const tryHackMeProgress = [
     detail: "Linux, Windows, networking, Splunk, Wireshark, and log analysis.",
   },
   {
-    label: "Evidence",
-    value: "Profile-based",
-    detail: "Use the public profile as your main proof of progress, then highlight standout rooms only when needed.",
+    label: "Portfolio signal",
+    value: "Verified practice",
+    detail: "Public lab activity that supports ongoing hands-on growth in blue team and investigation skills.",
   },
 ];
 
 const highlights = [
-  "AI content evaluation experience focused on prompt injection patterns, sensitive data disclosure risks, and safer model behavior.",
+  "LLM model training experience focused on OWASP LLM risk patterns, prompt injection testing, sensitive data disclosure controls, and RLHF-aligned safer model behavior.",
   "Experience working in data-sensitive and compliance-driven environments across education, healthcare, insurance, and social services.",
   "Leadership experience supporting remote teams, quality review, documentation, and operational improvement.",
   "Current cybersecurity focus includes security awareness, risk identification, incident documentation, AI security, and log analysis.",
@@ -168,7 +168,7 @@ export default function App() {
               <a className="button button-primary" href="#projects">
                 View projects <ArrowRight size={18} />
               </a>
-              <a className="button button-secondary" href="Patrice-Brown-Cybersecurity-Resume.pdf" target="_blank" rel="noreferrer">
+              <a className="button button-secondary" href="Patrice_Brown_Resume_Cybersecurity.pdf" target="_blank" rel="noreferrer">
                 Resume <FileText size={18} />
               </a>
               <a className="button button-secondary" href="#contact">
@@ -184,7 +184,7 @@ export default function App() {
             </div>
             <ul>
               <li>SIEM and security log review</li>
-              <li>AI safety and prompt injection evaluation</li>
+              <li>LLM model training and prompt injection testing</li>
               <li>Incident response documentation</li>
               <li>Risk identification and mitigation planning</li>
             </ul>
@@ -266,15 +266,11 @@ export default function App() {
         </section>
 
         <section id="projects" className="section">
-          <div className="section-heading section-heading-row">
+          <div className="section-heading">
             <div>
               <p className="eyebrow">Cybersecurity Projects</p>
-              <h2>Data-driven project cards ready for future case studies.</h2>
+              <h2>Hands-on security projects and labs.</h2>
             </div>
-            <p className="muted">
-              Placeholder projects are intentionally labeled so they can be replaced
-              with completed labs and reports.
-            </p>
           </div>
           <ProjectGrid />
         </section>
@@ -329,15 +325,11 @@ export default function App() {
         </section>
 
         <section id="tryhackme" className="section tryhackme-section">
-          <div className="section-heading section-heading-row">
+          <div className="section-heading">
             <div>
               <p className="eyebrow">TryHackMe Progress</p>
               <h2>Hands-on labs that support practical security skills.</h2>
             </div>
-            <p className="muted">
-              This section now points to your public TryHackMe profile so visitors can
-              see your current progress without relying on room-by-room screenshots.
-            </p>
           </div>
           <div className="tryhackme-grid">
             {tryHackMeProgress.map((item) => (
@@ -386,9 +378,8 @@ export default function App() {
             <p className="eyebrow">Contact</p>
             <h2>Let's connect professionally.</h2>
             <p>
-              For now, this portfolio uses direct contact links instead of a frontend
-              contact form, which keeps deployment simple and avoids collecting
-              messages without a secure backend.
+              I welcome opportunities to connect about cybersecurity, AI security,
+              SOC-focused work, and hands-on security projects.
             </p>
           </div>
           <div className="contact-actions">
@@ -407,7 +398,6 @@ export default function App() {
 
       <footer className="site-footer">
         <span>(c) {new Date().getFullYear()} Patrice Brown</span>
-        <span>Cybersecurity portfolio built with React, TypeScript, and Vite.</span>
       </footer>
     </div>
   );
