@@ -117,6 +117,38 @@ export const projects: Project[] = [
     icon: Bot,
   },
   {
+    title: "Prompt Validation Project",
+    category: "AI Validation & QA",
+    status: "Completed",
+    tools: ["Python", "Pandas", "SQL", "Prompt Engineering", "OpenPyXL", "Excel QA", "LLM Validation"],
+    shortDescription:
+      "An AI validation workflow for product-operations triage and benefits-rule auditing using prompts, Python validation harnesses, and SQL reporting.",
+    detailedDescription:
+      "Built a compact validation project around two enterprise-style scenarios: prompt-governed product operations triage and deterministic benefits-status auditing. The project uses prompt frameworks, Python validation engines, SQL accuracy queries, and artifact-based review to turn vague model behavior into measurable quality signals and business-ready findings.",
+    keySkills: [
+      "Prompt validation design",
+      "Python QA automation",
+      "SQL accuracy reporting",
+      "LLM output auditing",
+    ],
+    githubLink: "https://github.com/patricelachelle/Prompt-Validation-Project",
+    screenshots: [
+      {
+        src: "projects/prompt-validation-project/prodops-prompt-design.png",
+        alt: "Prompt Validation Project prompt design for bug categorization and product operations triage",
+      },
+      {
+        src: "projects/prompt-validation-project/prodops-validation-output.png",
+        alt: "Prompt Validation Project Python validation output showing product operations classification mismatches",
+      },
+      {
+        src: "projects/prompt-validation-project/validation-sql-reporting.png",
+        alt: "Prompt Validation Project SQL reporting screenshot showing validation accuracy and failure metrics",
+      },
+    ],
+    icon: Bot,
+  },
+  {
     title: "Windows Detection Engineering Pack",
     category: "Detection Engineering",
     status: "Completed",
